@@ -11,3 +11,20 @@ if top_range.isdigit():
 else:
     print('Por favor, digita un número la proxima vez!')
     quit()
+    
+random_number = random.randint(0,top_range)
+print(random_number)
+
+while True:
+    user_guess = input('Adivina el número: ')
+    if user_guess.isdigit():
+        user_guess = int(user_guess)
+    else:
+        print('Por favor, digita un número la proxima vez!')
+        continue
+    
+    if user_guess == random_number:
+        print('Adivinaste!')
+        break
+    else:
+        print('Te equivocaste!')
