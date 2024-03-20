@@ -13,9 +13,10 @@ else:
     quit()
     
 random_number = random.randint(0,top_range)
-print(random_number)
+guesses = 0
 
 while True:
+    guesses += 1
     user_guess = input('Adivina el número: ')
     if user_guess.isdigit():
         user_guess = int(user_guess)
@@ -26,5 +27,9 @@ while True:
     if user_guess == random_number:
         print('Adivinaste!')
         break
+    elif user_guess > random_number:
+        print('Estas por encima del número')
     else:
-        print('Te equivocaste!')
+        print('Estas por debajo del número')
+
+print('Adivinaste en', guesses, "intentos")
