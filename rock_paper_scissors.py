@@ -10,7 +10,7 @@ while True:
     if user_input == "q":
         break
     
-    if user_input not in ["piedra","papel","tijera"]:
+    if user_input not in options:
         continue
     
     random_number = random.randint(0,2)
@@ -21,6 +21,19 @@ while True:
     if user_input == "piedra" and computer_pick == "tijera":
         print("Has ganado")
         user_wins += 1
-        continue
     
-print("Adios!")
+    elif user_input == "papel" and computer_pick == "piedra":
+        print("Has ganado")
+        user_wins += 1
+    
+    elif user_input == "tijera" and computer_pick == "papel":
+        print("Has ganado")
+        user_wins += 1
+        
+    else:
+        print("Has perdido!")
+        computer_wins += 1
+
+print(" Has ganado", user_wins, "veces.")
+print("La computador gano", computer_wins, "veces.")
+print("Excelente juego, felicitaciones a los ganadores!")
