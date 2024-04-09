@@ -13,3 +13,21 @@ if answer == "izquierda":
     else:
         print("Sin opción valida. Perdiste!.")
         
+elif answer == "derecha":
+    answer = input("Ve al puente, parece inestable, ¿Quieres cruzarlo o devolverte?.")
+    if answer == "volver":
+        print("Vuelves y pierdes.")
+    elif answer == "cruzar":
+        answer = input("Cruzas el puente y conoces un extraño. Les hablas a ellos(si/no)? ")
+        
+        if answer == "si":
+            print("Le hablas al extraño y ellos te dan oro, Ganaste!.")
+        
+        elif answer == "no":
+            print("Ignoras al extraño y ellos se ofenden. Perdiste!.")
+    else:
+        print("No es una opcion valida. Perdiste.")
+        
+else:
+    print("No es una opcion valida. Perdiste!.")
+print("Gracias por intentarlo", name)
